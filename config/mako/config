@@ -1,0 +1,19 @@
+anchor=top-right
+icons=1
+actions=1
+markup=1
+padding=10
+default-timeout=5000
+font=FiraCode Nerd Font 10
+border-radius=4
+margin=25,16,0
+border-size=1
+group-by=app-name,urgency
+
+background-color=#1e1e2eee
+text-color=#cdd6f4
+border-color=#89b4fa
+progress-color=over #313244
+
+[urgency=high]
+border-color=#fab387

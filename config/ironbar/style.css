@@ -1,0 +1,267 @@
+@define-color color_bg rgba(4, 7, 32, 0.75);
+@define-color color_text rgb(205, 214, 244);
+
+* {
+    font-family: FiraCode Nerd Font, sans-serif;
+    font-size: 1.035em;
+
+    border: none;
+}
+
+#bar {
+    background-color: @color_bg;
+}
+
+.background,
+.container,
+.container * {
+    background-color: @color_bg;
+    color: @color_text;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+}
+
+.workspaces {
+    background-color: @color_bg;
+}
+
+.workspaces .item {
+    color: @color_text;
+    box-shadow: none;
+    background-color: @color_bg;
+    border-radius: 0;
+    background-image: none;
+}
+
+.workspaces .text-button {
+    color: @color_text;
+    background-color: @color_bg;
+    border-radius: 0;
+    background-image: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 10px;
+} 
+
+.workspaces .item.focused {
+    border-radius: 0;
+    box-shadow: inset 0 -3px;
+    background-color: @color_bg;
+}
+
+.workspaces *:not(.focused):hover {
+    background-color: @color_bg;
+    background-image: none;
+    box-shadow: inset 0 -3px;
+}
+
+.clock {
+    color: @color_text;
+    background-color: @color_bg;
+    margin-left: 5px;
+    background-image: none;
+    border: 0;
+    border-color: transparent;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.script {
+    padding-left: 10px;
+    color: @color_text;
+}
+
+.sysinfo {
+    margin-left: 10px;
+    color: @color_text;
+    background-color: @color_bg;
+}
+
+.sysinfo .item {
+    margin-left: 5px;
+    background-color: @color_bg;
+}
+
+.tray {
+    background-color: @color_bg;
+    margin-left: 10px;
+}
+
+.tray .item {
+    background-color: @color_bg;
+    color: @color_text;
+}
+
+.music {
+    background-color: @color_bg;
+    background-image: none;
+    color: @color_text;
+    box-shadow: none;
+}
+
+.popup {
+    background-color: @color_bg;
+    color: @color_text;
+    border: 1px solid #424242;
+    font-size: 0.7em;
+}
+
+.tray .item {
+    background-color: @color_bg;
+}
+
+.tray .popup {
+    background-color: @color_bg;
+    color: @color_text;
+    border: 1px solid #424242;
+}
+
+.tray .popup menu,
+.tray .popup label {
+    background-color: transparent;
+}
+
+.tray .popup menuitem {
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.tray .popup menuitem:hover {
+    box-shadow: inset 0 -3px;
+}
+
+.popup-clock {
+    padding: 0.5em;
+    font-size: 1.1em;
+}
+
+.clock:hover {
+    box-shadow: inset 0 -3px;
+    border-radius: 0;
+}
+
+.calendar-clock {
+    color: @color_text;
+    font-size: 2.5em;
+    padding-bottom: 0.1em;
+}
+
+.calendar {
+    background-color: @color_bg;
+    color: @color_text;
+    padding: 0 0.4em;
+}
+
+.calendar:selected {
+    background-color: #107ae3;
+}
+
+.music:hover {
+    box-shadow: inset 0 -3px;
+    border-radius: 0;
+}
+
+.music .contents .label {
+    padding: 0 15px;
+}
+
+.popup-music {
+    color: @color_text;
+    padding: 1em;
+}
+
+.popup-music .album-art {
+    margin-right: 1em;
+}
+
+.popup-music .icon,
+.popup-music .label {
+    font-size: 1em;
+    padding: 0.2em;
+}
+
+.popup-music .controls * {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: @color_bg;
+    color: @color_text;
+    background-image: none;
+    border: none;
+}
+
+.popup-music .controls .btn-prev:hover,
+.popup-music .controls .btn-play:hover,
+.popup-music .controls .btn-pause:hover,
+.popup-music .controls .btn-next:hover {
+    box-shadow: inset 0 -3px;
+    border-radius: 0;
+}
+
+.popup-music .volume .bottom {
+    padding: 4px;
+}
+
+.popup-music .volume .label {
+    padding-left: 14px;
+    margin-top: -16px;
+}
+
+.focused {
+    color: @color_text;
+}
+
+.power-menu {
+    box-shadow: none;
+    background-color: @color_bg;
+    background-image: none;
+}
+
+.power-menu #power-btn {
+    color: @color_text;
+    box-shadow: none;
+    background-image: none;
+    background-color: @color_bg;
+}
+
+.power-menu #power-btn:hover {
+    box-shadow: inset 0 -3px;
+    border-radius: 0;
+}
+
+.popup-power-menu {
+    padding: 1em;
+}
+
+.popup-power-menu #header {
+    color: @color_text;
+    font-size: 1.4em;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.8em;
+}
+
+.popup-power-menu .power-btn {
+    color: @color_text;
+    background-color: @color_bg;
+    border: 1px solid white;
+    padding: 0.6em 1em;
+}
+
+.popup-power-menu .power-btn+.power-btn {
+    margin-left: 1em;
+}
+
+.popup-power-menu .power-btn:hover {
+    background-color: @color_bg;
+}
+
+.upower .icon {
+    opacity: 0;
+}
+
+.upower {
+    color: @color_text;
+}

@@ -1,0 +1,160 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+I tried so hard, and got so far...
+
+Hyprland received signal 6 (Aborted)
+
+Version: 96d555e8e794627bfc561e294e148ab8a9961fcc
+Tag: v0.29.1
+
+System info:
+	System name: Linux
+	Node name: pikaos
+	Release: 6.5.0-pikaos
+	Version: #1 SMP PREEMPT_DYNAMIC Tue Aug 29 11:55:16 UTC 2023
+
+GPU:
+	0b:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Baffin [Radeon RX 550 640SP / RX 560/560X] [1002:67ff] (rev cf) (prog-if 00 [VGA controller])
+
+
+os-release:
+	PRETTY_NAME="PikaOS 23.04"
+	NAME="PikaOS"
+	VERSION_ID="23.04"
+	VERSION="23.04 (Lunar Lobster)"
+	VERSION_CODENAME=lunar
+	ID=pika
+	ID_LIKE="ubuntu debian"
+	VERSION_CODENAME=lunar
+	UBUNTU_CODENAME=lunar
+	LOGO=pika-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x61) [0x55563590d991]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x621) [0x5556358fa341]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x43) [0x5556358bf523]
+		??
+		??:0
+	#3 | /lib/x86_64-linux-gnu/libc.so.6(+0x3c4b0) [0x7f6c90e3c4b0]
+		??
+		??:0
+	#4 | /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11b) [0x7f6c90e90ffb]
+		??
+		??:0
+	#5 | /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x16) [0x7f6c90e3c406]
+		??
+		??:0
+	#6 | /lib/x86_64-linux-gnu/libc.so.6(abort+0xd7) [0x7f6c90e2287c]
+		??
+		??:0
+	#7 | /lib/x86_64-linux-gnu/libc.so.6(+0x2279b) [0x7f6c90e2279b]
+		??
+		??:0
+	#8 | /lib/x86_64-linux-gnu/libc.so.6(+0x33b86) [0x7f6c90e33b86]
+		??
+		??:0
+	#9 | Hyprland(+0x1c4af2) [0x5556359cdaf2]
+		??
+		??:0
+	#10 | Hyprland(+0x1cbc9d) [0x5556359d4c9d]
+		??
+		??:0
+	#11 | Hyprland(+0x1cbee1) [0x5556359d4ee1]
+		??
+		??:0
+	#12 | Hyprland(wlr_output_commit_state+0x122) [0x5556359ed352]
+		??
+		??:0
+	#13 | Hyprland(wlr_output_commit+0xc3) [0x5556359ed503]
+		??
+		??:0
+	#14 | Hyprland(_ZN13CHyprRenderer13renderMonitorEP8CMonitor+0x7a3) [0x5556359b4a63]
+		??
+		??:0
+	#15 | Hyprland(_Z13handleWrappedP11wl_listenerPv+0x40) [0x5556358fcfd0]
+		??
+		??:0
+	#16 | /lib/x86_64-linux-gnu/libwayland-server.so.0(wl_signal_emit_mutable+0x7c) [0x7f6c91ba772c]
+		??
+		??:0
+	#17 | /lib/x86_64-linux-gnu/libwayland-server.so.0(wl_event_loop_dispatch_idle+0x23) [0x7f6c91ba90b3]
+		??
+		??:0
+	#18 | /lib/x86_64-linux-gnu/libwayland-server.so.0(wl_event_loop_dispatch+0xfa) [0x7f6c91ba91ca]
+		??
+		??:0
+	#19 | /lib/x86_64-linux-gnu/libwayland-server.so.0(wl_display_run+0x25) [0x7f6c91ba9905]
+		??
+		??:0
+	#20 | Hyprland(main+0x9e9) [0x5556358981a9]
+		??
+		??:0
+	#21 | /lib/x86_64-linux-gnu/libc.so.6(+0x23a90) [0x7f6c90e23a90]
+		??
+		??:0
+	#22 | /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x89) [0x7f6c90e23b49]
+		??
+		??:0
+	#23 | Hyprland(_start+0x25) [0x5556358b1035]
+		??
+		??:0
+
+
+Log tail:
+[LOG] Process Created with pid 2988
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:0 /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
+[LOG] Process Created with pid 2991
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:0 ags
+[LOG] Process Created with pid 2994
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:0 /etc/pika_login.sh
+[LOG] Process Created with pid 2997
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:0 swayidle timeout 300 '/usr/share/pika/lock.sh --grace 10 --fade-in 4' timeout 330 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep '/usr/share/pika/lock.sh'
+[LOG] Process Created with pid 3007
+[LOG] Executing WAYLAND_DISPLAY=wayland-1 DISPLAY=:0 pika-installer &
+[LOG] Process Created with pid 3012
+[LOG] ApplyConfigToKeyboard for "power-button", hasconfig: 0
+[LOG] Attempting to create a keymap for layout us with variant  (rules: , model: , options: )
+[LOG] Set the keyboard layout to us and variant to  for keyboard "Power Button"
+[LOG] ApplyConfigToKeyboard for "power-button-1", hasconfig: 0
+[LOG] Attempting to create a keymap for layout us with variant  (rules: , model: , options: )
+[LOG] Set the keyboard layout to us and variant to  for keyboard "Power Button"
+[LOG] ApplyConfigToKeyboard for "2.4g-rf-keyboard-&-mouse", hasconfig: 0
+[LOG] Attempting to create a keymap for layout us with variant  (rules: , model: , options: )
+[LOG] Set the keyboard layout to us and variant to  for keyboard "2.4G RF Keyboard & Mouse"
+[LOG] ApplyConfigToKeyboard for "2.4g-rf-keyboard-&-mouse-consumer-control", hasconfig: 0
+[LOG] Attempting to create a keymap for layout us with variant  (rules: , model: , options: )
+[LOG] Set the keyboard layout to us and variant to  for keyboard "2.4G RF Keyboard & Mouse Consumer Control"
+[LOG] ApplyConfigToKeyboard for "2.4g-rf-keyboard-&-mouse-system-control", hasconfig: 0
+[LOG] Attempting to create a keymap for layout us with variant  (rules: , model: , options: )
+[LOG] Set the keyboard layout to us and variant to  for keyboard "2.4G RF Keyboard & Mouse System Control"
+[LOG] Applied config to mouse 2.4g-rf-keyboard-&-mouse-1, sens 0.00
+[LOG] Applied config to mouse 2.4g-rf-keyboard-&-mouse-consumer-control-1, sens 0.00
+[LOG] Applying monitor rule for DP-1
+[LOG] Not applying a new rule to DP-1 because it's already applied!
+[LOG] Monitor DP-1 layers arranged: reserved: 0.000000 0.000000 0.000000 0.000000
+[LOG] Applying monitor rule for HDMI-A-1
+[LOG] Not applying a new rule to HDMI-A-1 because it's already applied!
+[LOG] Monitor HDMI-A-1 layers arranged: reserved: 0.000000 0.000000 0.000000 0.000000
+[LOG] Applying monitor rule for DVI-D-1
+[LOG] Not applying a new rule to DVI-D-1 because it's already applied!
+[LOG] Monitor DVI-D-1 layers arranged: reserved: 0.000000 0.000000 0.000000 0.000000
+[LOG]  [hookSystem] New hook event registered: render
+[LOG] Framebuffer created, status 36053
+[LOG] Framebuffer created, status 36053
+[LOG] Framebuffer created, status 36053
+[LOG] Allocated texture for BGTex
+[LOG] Background created for monitor DP-1
+[LOG] Shaders initialized successfully.
+[LOG] Framebuffer created, status 36053
+[LOG] Framebuffer created, status 36053
+[LOG] Framebuffer created, status 36053
+[LOG] Allocated texture for BGTex
+[LOG] Background created for monitor HDMI-A-1
+[LOG] Shaders initialized successfully.
